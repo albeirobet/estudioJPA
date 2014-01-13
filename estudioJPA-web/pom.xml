@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.ascuntar</groupId>
+		<artifactId>estudioJPA</artifactId>
+		<version>1.0</version>
+	</parent>
+	<artifactId>estudioJPA-web</artifactId>
+	<packaging>war</packaging>
+	<name>${name.project}-web</name>
+	<developers>
+		<developer>
+			<id>albeirobet</id>
+			<name>Eyder Albeiro Ascuntar Rosales</name>
+			<email>eaar23@gmail.com</email>
+		</developer>
+	</developers>
+	<dependencies>
+		<!-- Api Java Web Dependency -->
+		<dependency>
+			<groupId>javax</groupId>
+			<artifactId>javaee-web-api</artifactId>
+			<version>${version.java.web}</version>
+			<scope>provided</scope>
+		</dependency>
+		<!-- Primefaces Dependencies -->
+		<dependency>
+			<groupId>org.primefaces</groupId>
+			<artifactId>primefaces</artifactId>
+			<version>${primefaces.version}</version>
+		</dependency>
+		<!-- Bootstrap Theme Primefaces -->
+		<dependency>
+			<groupId>org.primefaces.themes</groupId>
+			<artifactId>bootstrap</artifactId>
+			<version>${bootstrap.version}</version>
+		</dependency>
+		<!-- Internal Application Dependencies -->
+		<dependency>
+			<groupId>com.ascuntar</groupId>
+			<artifactId>estudioJPA-bo</artifactId>
+			<version>1.0</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.ascuntar</groupId>
+			<artifactId>estudioJPA-dm</artifactId>
+			<version>1.0</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.ascuntar</groupId>
+			<artifactId>estudioJPA-commons</artifactId>
+			<version>1.0</version>
+			<scope>provided</scope>
+		</dependency>
+	</dependencies>
+	<!-- Primefaces Repository -->
+	<repositories>
+		<repository>
+			<id>prime-repo</id>
+			<name>PrimeFaces Maven Repository</name>
+			<url>http://repository.primefaces.org</url>
+			<layout>default</layout>
+		</repository>
+	</repositories>
+</project>

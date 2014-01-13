@@ -1,0 +1,21 @@
+<persistence version="2.0"
+	xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+        http://java.sun.com/xml/ns/persistence
+        http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+	<!-- Configure el datasource en algun servidor que soporte Java ee7, por 
+		ejemplo Wildfly8, Glassfish4. -->
+	<persistence-unit name="estudioJPAPU"
+		transaction-type="JTA">
+		<jta-data-source>java:/jboss/estudioJPADS</jta-data-source>
+		<class>com.ascuntar.estudioJPA.entities.Prueba</class>
+		<properties>
+			<!-- Properties for Hibernate -->
+			<property name="hibernate.hbm2ddl.auto" value="create-drop" />
+			<property name="hibernate.show_sql" value="true" />
+			<property name="hibernate.format_sql" value="true" />
+			<property name="hibernate.hbm2ddl.import_files" value="insert.sql" />
+
+		</properties>
+	</persistence-unit>
+</persistence>
