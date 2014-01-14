@@ -1,5 +1,7 @@
 package com.ascuntar.estudioJPA.entities;
 
+import java.io.Serializable;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -12,8 +14,12 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "TBL_PRUEBA")
-public class Prueba {
+public class Prueba implements Serializable{
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -2231965550492253340L;
 	@Id
 	@GeneratedValue
 	@Column(name="ID")
