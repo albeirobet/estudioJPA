@@ -5,8 +5,8 @@
         http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
 	<!-- Configure el datasource en algun servidor que soporte Java ee7, por 
 		ejemplo Wildfly8, Glassfish4. -->
-	<persistence-unit name="estudioJPAPU"
-		transaction-type="JTA">
+	<persistence-unit name="estudioJPAPU" transaction-type="JTA">
+		<provider>org.hibernate.ejb.HibernatePersistence</provider>
 		<jta-data-source>java:/jboss/estudioJPADS</jta-data-source>
 		<class>com.ascuntar.estudioJPA.entities.Prueba</class>
 		<class>com.ascuntar.estudioJPA.entities.News</class>
@@ -14,6 +14,9 @@
 		<class>com.ascuntar.estudioJPA.entities.CreditCard</class>
 		<class>com.ascuntar.estudioJPA.entities.Cliente</class>
 		<class>com.ascuntar.estudioJPA.entities.Direccion</class>
+		<class>com.ascuntar.estudioJPA.herencia.Item1</class>
+		<class>com.ascuntar.estudioJPA.herencia.Book1</class>
+		<class>com.ascuntar.estudioJPA.herencia.CD1</class>
 		<properties>
 			<!-- Properties for Hibernate -->
 			<property name="hibernate.hbm2ddl.auto" value="create-drop" />
